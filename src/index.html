@@ -21,10 +21,7 @@
     />
 
     <meta name="author" content="Axel Lanuza" />
-    <meta
-      name="keywords"
-      content="Roadmap Project, Reddit Client"
-    />
+    <meta name="keywords" content="Roadmap Project, Reddit Client" />
     <meta
       name="description"
       content="Create a Reddit client with customizable subreddit lanes."
@@ -38,24 +35,67 @@
     <link type="text/plain" rel="author" href="humans.txt" />
     <link rel="stylesheet" href="./css/app.css" />
 
-    <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script
-    ><![endif]-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
-    <!-- main start -->
-
     <main role="main">
-      <section class="grid-layout">
-        <img
-          src="https://placehold.co/600x300/03122f/white?font=roboto&text=Reddit Client"
-          alt="Reddit Client"
-        />
-      </section>
+      <div class="reddit-client">
+        <div class="header">
+          <p class="text-xl font-bold underline">/r/javascript</p>
+          <img
+            src="./images/redditicon.png"
+            alt="Reddit Icon"
+            class="reddit-icon"
+          />
+        </div>
+        <div class="my-2 items-center gap-4 reddit-actions">
+          <button class="btn delete-reddit">
+            <img src="./images/delete.svg" alt="Delete Icon" class="icon" />
+            Delete
+          </button>
+          <button class="btn refresh-reddit">
+            <img src="./images/refresh.svg" alt="Refresh Icon" class="icon" />
+            Refresh
+          </button>
+        </div>
+        <div class="my-2 items-center gap-4 reddit-lane"></div>
+      </div>
     </main>
-
-    <!-- main end -->
+    <div id="subredditModal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Add Subreddit</h2>
+        <div id="subreddit-input">
+          <label for="add-subreddit">Ingrese el nombre del Subreddit :</label>
+          <input
+            type="text"
+            id="subreddit-name"
+            placeholder="Nombre del subreddit"
+          />
+          <button id="add-subreddit">Agregar Subreddit</button>
+        </div>
+        <div id="subreddit-list"></div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="../build/app.js"></script>
   </body>

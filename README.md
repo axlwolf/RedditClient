@@ -1,6 +1,6 @@
 ## Image Grid Layout
 
-Roadmap project link:https://roadmap.sh/projects/reddit-client/solutions?u=
+Roadmap project link: https://roadmap.sh/projects/reddit-client/solutions?u=64b1bc4d5f038d81eeb4b894
 
 Roadmap project: https://roadmap.sh/projects/reddit-client
 
@@ -54,7 +54,3 @@ Don't forget add to index.html this line:
 - Include 5 pure css media queries points and best normalize css practices.
 - Include all you needed html meta tags.
 - ES6 and browserify syntax support. (require, arrow func, let const etc...).
-
-### 2020 updates
-
-- SASS support (thanks @patrikniebur)

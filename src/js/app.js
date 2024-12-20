@@ -1,4 +1,4 @@
-import { GhRandomRepository } from "./gh-random-repository";
+import { RedditClient } from "./redit-client";
 import "../css/app.css";
 import "../scss/reset.scss";
 import "../scss/drowndown.scss";
@@ -12,5 +12,5 @@ import "../scss/style.scss";
 // };
 
 document.addEventListener("DOMContentLoaded", () => {
-  GhRandomRepository.init();
+  RedditClient.init();
 });
